@@ -1,0 +1,17 @@
+@import '../../assets/variables.scss';
+
+.header_container {
+    @include frc;
+    justify-content: end;
+    gap: 1.5vw;
+    width: 100%;
+    height: 60px;
+    @media screen and (width < 400px) {
+        gap: 10vw;
+        justify-content: end;
+    }
+    a {
+        @include font-link;
+    }
+
+}

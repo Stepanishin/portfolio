@@ -1,0 +1,13 @@
+@import '../../assets/variables.scss';
+
+.heroPage_container {
+    width: 100vw;
+    min-height: calc(100vh - 60px);
+    position: relative;
+    top: -100px;
+    @include frc;
+    @include font-base;
+    .heroPage_description {
+        @include fcc;
+    }
+}

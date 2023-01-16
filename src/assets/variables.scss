@@ -1,0 +1,27 @@
+$orange-color: rgb(253, 81, 12);
+$orange-color-hover:rgb(177, 56, 8);
+
+@mixin frc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin fcc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin font-base {
+    font-family: Mada;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+@mixin font-link {
+    font-family: Mada;
+    font-weight: 700;
+    font-size: 1.5em;
+}
