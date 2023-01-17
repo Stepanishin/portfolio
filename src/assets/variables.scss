@@ -5,6 +5,7 @@ $orange-color-hover:rgb(177, 56, 8);
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 @mixin fcc {
@@ -12,6 +13,7 @@ $orange-color-hover:rgb(177, 56, 8);
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 @mixin font-base {
@@ -20,7 +22,7 @@ $orange-color-hover:rgb(177, 56, 8);
     font-size: 1.5em;
 }
 
-@mixin font-link {
+@mixin font-title {
     font-family: Mada;
     font-weight: 700;
     font-size: 1.5em;

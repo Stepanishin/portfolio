@@ -2,8 +2,19 @@
 
 @import url(https://fonts.googleapis.com/css?family=Mada:200,300,regular,500,600,700,900);
 
+p {
+    font-family: Mada;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
 .container {
     margin: 0 auto;
     max-width: 1440px;
     padding: 0px 50px;
+}
+
+.title {
+    text-align: center;
+    @include font-title;
 }

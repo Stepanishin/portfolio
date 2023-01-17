@@ -4,38 +4,75 @@ import ReactImg from './img/React.svg'
 import JSImg from './img/javascript.svg'
 import TypescriptImg from './img/typescript.svg'
 import ReduxImg from './img/redux.svg'
+import AntDesignImg from './img/ant-design.svg'
+import HTML5Img from './img/html5.svg'
+import MaterialUIImg from './img/material-ui.svg'
+import SASSImg from './img/sass.svg'
+import NodeJSImg from './img/nodejs.svg'
+import ExpressImg from './img/express-js.svg'
+import MongoDBImg from './img/mongodb.svg'
+import FirebaseImg from './img/firebase.svg'
 
 interface Item {
     name: string,
     img: string,
-    width: string,
-    height:string;
+    width?: number,
+    heigth?: number
 }
 
 const myFrontendSkills = [
     {
         name: 'React',
         img: ReactImg,
-        width: '30',
-        height:'30',
     },
     {
         name: 'TypeScript',
         img: TypescriptImg,
-        width: '30',
-        height:'30',
     },
     {
         name: 'JavaScript',
         img: JSImg,
-        width: '30',
-        height:'30',
     },
     {
         name: 'Redux',
         img: ReduxImg,
-        width: '30',
-        height:'30',
+    },
+    {
+        name: 'SCSS/SASS',
+        img: SASSImg,
+    },
+    {
+        name: 'HTML5',
+        img: HTML5Img,
+    },
+    {
+        name: 'AntDesign',
+        img: AntDesignImg,
+    },
+    {
+        name: 'MaterialUI',
+        img: MaterialUIImg,
+    },
+]
+
+const myBackendSkills = [
+    {
+        name: 'NodeJS',
+        img: NodeJSImg,
+        width: 80,
+    },
+    {
+        name: 'Express.js',
+        img: ExpressImg,
+    },
+    {
+        name: 'MongoDB',
+        img: MongoDBImg,
+        width: 80,
+    },
+    {
+        name: 'Firebase',
+        img: FirebaseImg,
     },
 ]
 
@@ -43,21 +80,39 @@ const Skills: FC = () => {
 
     return (
         <div className='container skills_container'>
-            <h2>SKILLS & TOOLS</h2>
+            <h2 className='title skills_title' >SKILLS & TOOLS</h2>
             <div>
-                {
-                    myFrontendSkills.map((el:Item) => {
-                        return (
-                            <div>
-                                <p>{el.name}</p>
-                                <img src={el.img} width={el.width} height={el.height} alt="" />
-                            </div>
-                        )
-                    })
-                }
+                <SkillsList title={'FrontEnd:'} list={myFrontendSkills} />
+                <SkillsList title={'Backend:'} list={myBackendSkills} />
             </div>
         </div>
     );
 };
 
 export default Skills;
+
+interface ISkillList {
+    title:string,
+    list:Item[],
+}
+
+const SkillsList: FC<ISkillList> = ({title, list}) => {
+
+    return (
+        <div className='skills_content_wrap'>
+            <h3 className='skills_content_title' >{title}</h3>
+            <div className='skills_content_list' >
+                {
+                    list.map((el:Item) => {
+                        return (
+                            <div className='skills_item' key={el.name}>
+                                <img src={el.img} width={el.width ? el.width : 50} height={el.heigth ? el.heigth : 50} alt="" />
+                                <p>{el.name}</p>
+                            </div>
+                        )
+                    })
+                }
+            </div>
+        </div>
+    )
+}

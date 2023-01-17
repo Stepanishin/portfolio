@@ -1,3 +1,22 @@
+@import '../../assets/variables.scss';
+
 .skills_container {
-    // min-height: 100vh;
+    .skills_content_wrap {
+        @include fcc;
+        gap: 50px;
+        margin-top: 50px;
+        .skills_content_title {
+            font-family: Mada;
+            font-weight: 500;
+            font-size: 1.5em;
+        }
+        .skills_content_list {
+            @include frc;
+            gap: 50px;
+            .skills_item {
+                @include fcc;
+                gap: 10px;
+            }
+        }
+    }
 }
