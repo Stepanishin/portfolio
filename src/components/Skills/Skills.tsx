@@ -80,7 +80,7 @@ const myBackendSkills = [
 const Skills: FC = () => {
 
     return (
-        <section className='container skills_container'>
+        <section id='SKILLS' className='container skills_container'>
             <Title className={'title'} title={'SKILLS & TOOLS'} />
             <div>
                 <SkillsList title={'FrontEnd:'} list={myFrontendSkills} />

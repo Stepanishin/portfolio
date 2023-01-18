@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import './Header.scss'
 
-const NavBar: FC = () => {
+const Header: FC = () => {
 
     return (
         <header className='header'>
@@ -20,4 +20,4 @@ const NavBar: FC = () => {
     );
 };
 
-export default NavBar;  
+export default Header;  
