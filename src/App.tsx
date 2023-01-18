@@ -5,6 +5,7 @@ import './assets/index.scss'
 import HeroPage from './components/HeroPage/HeroPage';
 import NavBar from './components/Header/Header';
 import Skills from './components/Skills/Skills';
+import Works from './components/Works/Works';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <NavBar />
       <HeroPage />
       <Skills />
+      <Works />
     </>
 
   );

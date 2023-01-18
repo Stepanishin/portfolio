@@ -1,7 +1,6 @@
 @import '../../assets/variables.scss';
 
 .heroPage_container {
-    width: 100vw;
     min-height: calc(100vh - 60px);
     @include frc;
     p {

@@ -12,6 +12,7 @@ import NodeJSImg from './img/nodejs.svg'
 import ExpressImg from './img/express-js.svg'
 import MongoDBImg from './img/mongodb.svg'
 import FirebaseImg from './img/firebase.svg'
+import Title from '../UI/Title/Title';
 
 interface Item {
     name: string,
@@ -79,13 +80,13 @@ const myBackendSkills = [
 const Skills: FC = () => {
 
     return (
-        <div className='container skills_container'>
-            <h2 className='title skills_title' >SKILLS & TOOLS</h2>
+        <section className='container skills_container'>
+            <Title className={'title'} title={'SKILLS & TOOLS'} />
             <div>
                 <SkillsList title={'FrontEnd:'} list={myFrontendSkills} />
-                <SkillsList title={'Backend:'} list={myBackendSkills} />
+                <SkillsList title={'BackEnd:'} list={myBackendSkills} />
             </div>
-        </div>
+        </section>
     );
 };
 
