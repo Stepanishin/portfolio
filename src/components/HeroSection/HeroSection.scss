@@ -1,10 +1,12 @@
 @import '../../assets/variables.scss';
 
 .heroPage_container {
-    min-height: calc(100vh - 60px);
+    min-height: 100vh ;
+    height: 450px;
     @include frc;
     p {
         @include font-base;
+        text-align: center;
     }
     .heroPage_description {
         @include fcc;

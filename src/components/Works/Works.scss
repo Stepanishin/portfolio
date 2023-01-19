@@ -7,11 +7,18 @@
         @include frc;
         flex-wrap: nowrap;
         justify-content: space-evenly;
+        @media screen and (width < 900px) {
+            @include fcc;
+            flex-direction: column-reverse !important;
+        }
         .works_item_description_container {
             @include fcc;
             align-items: flex-start;
             width: 35vw;
             gap: 30px;
+            @media screen and (width < 900px) {
+                width: 100%;
+            }
             .works_item_title {
                 @include font-title;
                 color: $orange-color;
@@ -19,13 +26,22 @@
             .works_item_links_container {
                 display: flex;
                 gap: 20px;
+                @media screen and (width < 900px) {
+                    justify-content: center;
+                    margin: 0 auto;
+                }
             }
         }
         .works_item_img {
             width: 35vw;
+            @media screen and (width < 900px) {
+                width: 100%;
+                margin-bottom: 20px;
+            }
         }
     }
-    .works_item_container:nth-child(2n) {
-        flex-direction: row-reverse;
-    }
+}
+
+.works_item_container:nth-child(2n) {
+    flex-direction: row-reverse;
 }

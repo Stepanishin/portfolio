@@ -1,6 +1,7 @@
 import React, {FC} from 'react';
 import './HeroSection.scss'
 import {HashLink} from 'react-router-hash-link'
+import Society from '../UI/Society/Society';
 
 const HeroSection: FC = () => {
 
@@ -9,7 +10,8 @@ const HeroSection: FC = () => {
         <main className='container heroPage_container'>
             <div className='heroPage_description'>
                 <p>Hello, I`m Evgenii.</p>
-                <p>I`m Front-End Web Developer</p>
+                <p>I`m a Front-End Web Developer</p>
+                <Society />
                 <HashLink className='heroPage_link' smooth to="/#SKILLS" >
                     See more
                 </HashLink>
